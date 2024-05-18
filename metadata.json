@@ -4,11 +4,11 @@
     "description": "Displays Internet Speed",
     "original-author": "hedayaty@gmail.com",
     "shell-version": [
-        "45"
+        "46"
     ],
     "url": "https://github.com/hedayaty/NetSpeed",
     "uuid": "netspeed@hedayaty.gmail.com",
     "settings-schema": "org.gnome.shell.extensions.netspeed",
     "gettext-domain": "netspeed",
-    "version": 38
+    "version": 39
 }

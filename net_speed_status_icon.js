@@ -46,7 +46,7 @@ export default GObject.registerClass(class NetSpeedStatusIcon extends PanelMenu.
 
         // extension button
         this._box = new St.BoxLayout();
-        this.add_actor(this._box);
+        this.add_child(this._box);
         this.connect('button-release-event', this._toggle_showsum.bind(this));
 
         // download
@@ -54,38 +54,38 @@ export default GObject.registerClass(class NetSpeedStatusIcon extends PanelMenu.
         this._down = new St.Label({ text: "---", style_class: 'ns-horizontal-label', y_align: Clutter.ActorAlign.CENTER });
         this._downunit = new St.Label({ text: "", style_class: 'ns-horizontal-unit-label', y_align: Clutter.ActorAlign.CENTER });
         this._downicon = new St.Label({ text: "⬇", style_class: 'ns-horizontal-icon', y_align: Clutter.ActorAlign.CENTER });
-        this._download_box.add_actor(this._down);
-        this._download_box.add_actor(this._downunit);
-        this._download_box.add_actor(this._downicon);
+        this._download_box.add_child(this._down);
+        this._download_box.add_child(this._downunit);
+        this._download_box.add_child(this._downicon);
 
         // upload
         this._upload_box = new St.BoxLayout();
         this._up = new St.Label({ text: "---", style_class: 'ns-horizontal-label', y_align: Clutter.ActorAlign.CENTER });
         this._upunit = new St.Label({ text: "", style_class: 'ns-horizontal-unit-label', y_align: Clutter.ActorAlign.CENTER });
         this._upicon = new St.Label({ text: "⬆", style_class: 'ns-horizontal-icon', y_align: Clutter.ActorAlign.CENTER });
-        this._upload_box.add_actor(this._up);
-        this._upload_box.add_actor(this._upunit);
-        this._upload_box.add_actor(this._upicon);
+        this._upload_box.add_child(this._up);
+        this._upload_box.add_child(this._upunit);
+        this._upload_box.add_child(this._upicon);
 
         // sum
         this._sum_box = new St.BoxLayout();
         this._sum = new St.Label({ text: "---", style_class: 'ns-horizontal-label', y_align: Clutter.ActorAlign.CENTER });
         this._sumunit = new St.Label({ text: "", style_class: 'ns-horizontal-unit-label', y_align: Clutter.ActorAlign.CENTER });
-        this._sum_box.add_actor(this._sum);
-        this._sum_box.add_actor(this._sumunit);
+        this._sum_box.add_child(this._sum);
+        this._sum_box.add_child(this._sumunit);
 
         // metrics box
         this._metrics_box = new St.BoxLayout({ y_align: Clutter.ActorAlign.CENTER });
-        this._metrics_box.add_actor(this._download_box);
-        this._metrics_box.add_actor(this._upload_box);
-        this._metrics_box.add_actor(this._sum_box);
-        this._box.add_actor(this._metrics_box);
+        this._metrics_box.add_child(this._download_box);
+        this._metrics_box.add_child(this._upload_box);
+        this._metrics_box.add_child(this._sum_box);
+        this._box.add_child(this._metrics_box);
 
         // interface icon
         this._icon_box = new St.BoxLayout();
         this._icon = this._getIcon(this._net_speed.get_device_type(this._net_speed.getDevice()));
-        this._icon_box.add_actor(this._icon);
-        this._box.add_actor(this._icon_box);
+        this._icon_box.add_child(this._icon);
+        this._box.add_child(this._icon_box);
 
         // Add pref luncher
         this._pref = new St.Button({ child: this._getIcon("pref") });
@@ -176,7 +176,7 @@ export default GObject.registerClass(class NetSpeedStatusIcon extends PanelMenu.
         Logger.debug("Device -> " + device);
 
         this._icon = this._getIcon(this._net_speed.get_device_type(device));
-        this._icon_box.add_actor(this._icon);
+        this._icon_box.add_child(this._icon);
         // Show icon or not
         if (this._settings.get_boolean('icon-display'))
             this._icon.show();
@@ -330,7 +330,7 @@ export default GObject.registerClass(class NetSpeedStatusIcon extends PanelMenu.
     }
 
     _positionInPanelChanged() {
-        this.container.get_parent().remove_actor(this.container);
+        this.container.get_parent().remove_child(this.container);
 
         // small HACK with private boxes :)
         let boxes = {

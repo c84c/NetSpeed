@@ -45,14 +45,14 @@ export const NetSpeedLayoutMenuItem = GObject.registerClass(
             this._ips_label = new St.Label({ text: "", style_class: "ns-menuitem" });
 
             if (this._icon !== null) {
-                this.add(this._icon);
+                this.add_child(this._icon);
             } else {
-                this.add(new St.Label());
+                this.add_child(new St.Label());
             }
-            this.add(this._device_title);
-            this.add(this._down_label);
-            this.add(this._up_label);
-            this.add(this._ips_label);
+            this.add_child(this._device_title);
+            this.add_child(this._down_label);
+            this.add_child(this._up_label);
+            this.add_child(this._ips_label);
             this.update_ui(menu_label_size);
             this.show_ip(false);
 
