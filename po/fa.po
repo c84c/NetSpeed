@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netspeed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-02 00:34+0100\n"
+"POT-Creation-Date: 2025-02-01 19:30+0100\n"
 "PO-Revision-Date: 2014-05-25 19:38-0700\n"
 "Last-Translator: Amir Hedayaty <hedayaty@gmail.com>\n"
 "Language-Team: Persian\n"
@@ -101,59 +101,59 @@ msgstr ""
 msgid "Show IPs"
 msgstr ""
 
-#: net_speed.js:151 net_speed.js:155 net_speed.js:159
+#: net_speed.js:146 net_speed.js:150 net_speed.js:154
 msgid "B/s"
 msgstr "B/s"
 
-#: net_speed.js:151
+#: net_speed.js:146
 msgid "kiB/s"
 msgstr ""
 
-#: net_speed.js:151
+#: net_speed.js:146
 msgid "MiB/s"
 msgstr ""
 
-#: net_speed.js:151
+#: net_speed.js:146
 msgid "GiB/s"
 msgstr ""
 
-#: net_speed.js:152 net_speed.js:156
+#: net_speed.js:147 net_speed.js:151
 msgid "b/s"
 msgstr ""
 
-#: net_speed.js:152
+#: net_speed.js:147
 msgid "kib/s"
 msgstr ""
 
-#: net_speed.js:152
+#: net_speed.js:147
 msgid "Mib/s"
 msgstr ""
 
-#: net_speed.js:152
+#: net_speed.js:147
 msgid "Gib/s"
 msgstr ""
 
-#: net_speed.js:155
+#: net_speed.js:150
 msgid "kB/s"
 msgstr ""
 
-#: net_speed.js:155
+#: net_speed.js:150
 msgid "MB/s"
 msgstr "MB/s"
 
-#: net_speed.js:155
+#: net_speed.js:150
 msgid "GB/s"
 msgstr "GB/s"
 
-#: net_speed.js:156
+#: net_speed.js:151
 msgid "kb/s"
 msgstr ""
 
-#: net_speed.js:156
+#: net_speed.js:151
 msgid "Mb/s"
 msgstr ""
 
-#: net_speed.js:156
+#: net_speed.js:151
 msgid "Gb/s"
 msgstr ""
 
