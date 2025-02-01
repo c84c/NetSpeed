@@ -23,8 +23,6 @@ import { Logger } from './lib.js';
 import { NetSpeed } from './net_speed.js';
 
 
-
-
 export default class extends Extension {
 
   enable() {
