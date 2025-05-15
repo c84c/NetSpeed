@@ -6,11 +6,12 @@
     "shell-version": [
         "45",
         "46",
-        "47"
+        "47",
+        "48"
     ],
     "url": "https://github.com/hedayaty/NetSpeed",
     "uuid": "netspeed@hedayaty.gmail.com",
     "settings-schema": "org.gnome.shell.extensions.netspeed",
     "gettext-domain": "netspeed",
-    "version": 42
+    "version": 43
 }
