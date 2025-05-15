@@ -172,16 +172,16 @@ const NetSpeedPreferences = new GObject.registerClass(class NetSpeedPreferences 
         let factor = this._settings.get_int('hi-dpi-factor');
         this._factor = factor;
 
-        this._label_adjustment.upper = 100 * factor;
-        this._label_adjustment.step_increment = factor;
+        this.label_size.upper = 100 * factor;
+        this.label_size.step_increment = factor;
         this._settings.set_int('label-size', this._settings.get_int('label-size') * factor / old_factor);
 
-        this._unit_label_adjustment.upper = 100 * factor;
-        this._unit_label_adjustment.step_increment = factor;
+        this.unit_label_size.upper = 100 * factor;
+        this.unit_label_size.step_increment = factor;
         this._settings.set_int('unit-label-size', this._settings.get_int('unit-label-size') * factor / old_factor);
 
-        this._menu_label_adjustment.upper = 100 * factor;
-        this._menu_label_adjustment.step_increment = factor;
+        this.menu_label_size.upper = 100 * factor;
+        this.menu_label_size.step_increment = factor;
         this._settings.set_int('menu-label-size', this._settings.get_int('menu-label-size') * factor / old_factor);
     }
 

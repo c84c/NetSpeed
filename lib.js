@@ -24,7 +24,7 @@ const DEBUG = false;
 export class Logger {
 
     static _formatMessage(message, file, func, line) {
-        return `[${this.extension.metadata.uuid}:${file}:${func}:${line}] -> ${message}`;
+        return `[${Logger._extension.metadata.uuid}:${file}:${func}:${line}] -> ${message}`;
     }
 
     static _makeMessage(message) {
@@ -46,7 +46,7 @@ export class Logger {
         if (Logger._domain)
             return;
 
-        this.extension = extension;
+        Logger._extension = extension;
 
         const { name: domain } = extension.metadata;
         Logger._domain = domain.replaceAll(' ', '-');
